@@ -1,8 +1,8 @@
 //*****************************************************************
 // File:   tiempoReaccion.cpp
-// Author: Programaci�n II. Universidad de Zaragoza
-// Date:   febrero 2024
-// Coms:   Programa que lista los argumentos de la l�nea de �rdenes
+// Author: Daniel Tomas Martinez
+// Date:   20/01/2024
+// Coms:   Programa que mide el tiempo de reaccion del usuario al pulsar enter
 //*****************************************************************
 
 #include <iostream>
@@ -59,6 +59,7 @@ int main(int argc, char *argv[])
              << endl;
     }
 
-    // Interpretacion: El tiempo que se muestra por pantalla es el tiempo que esta la CPU ocupada, al ser una instruccion
-    // que se ejecuta en un tiempo muy corto, el tiempo que se muestra es muy pequeño.
+    // Interpretacion: El tiempo que se muestra por pantalla es el tiempo que esta la CPU ocupada,
+    //                 al ser una instruccion que se ejecuta en un tiempo muy corto, el tiempo que
+    //                 se muestra es muy pequeño.
 }
