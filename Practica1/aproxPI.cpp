@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
     // Declaracion de semilla de numeros aleatorios
     // srand(time(nullptr));
 
+    // Comprobacion de argumentos
     if (minN <= 0 || paso < 0 || nIter <= 0)
     {
         cout << "Error: Los argumentos deben ser numeros enteros positivos." << endl;
@@ -56,6 +57,7 @@ int main(int argc, char *argv[])
         unsigned nDentro = 0;
         struct timespec start, finish;
 
+        // Medimos el tiempo de CPU de la aproximacion en cada iteracion
         clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
         // Generamos n puntos aleatorios en el cuadrado de lado 1
         for (int j = 0; j < n; j++)
@@ -71,10 +73,13 @@ int main(int argc, char *argv[])
         }
         clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &finish);
 
+        // Calculamos el valor de PI aproximado, el error relativo y el tiempo de CPU
         pi = 4.0 * nDentro / n;
         error_rel = 100.0 * abs(pi - M_PI) / M_PI;
         tiempo_cpu = (finish.tv_sec - start.tv_sec) + (finish.tv_nsec - start.tv_nsec) * 1e-9;
 
+        // Convertimos los valores de n, PI, error relativo y tiempo de CPU a string para mostrarlos
+        // por pantalla con el formato adecuado
         ostringstream n_str;
         n_str << n << ";";
 
