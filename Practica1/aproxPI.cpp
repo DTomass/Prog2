@@ -16,8 +16,7 @@
 
 using namespace std;
 
-// Pre:  ---
-// Post: Muestra por pantalla el valor de PI aproximado mediante el metodo de Monte Carlo
+// Muestra por pantalla el valor de PI aproximado mediante el metodo de Monte Carlo
 int main(int argc, char *argv[])
 {
     // Declaracion de variables de entrada
@@ -30,12 +29,7 @@ int main(int argc, char *argv[])
     float error_rel = 0.0;
     float tiempo_cpu = 0.0;
 
-    // Comprobacion de argumentos
-    if (argc != 4)
-    {
-        cout << "Error: Numero de argumentos incorrecto." << endl;
-        return 1;
-    }
+    // Asignacion de variables de entrada
     minN = atoi(argv[1]);
     paso = atoi(argv[2]);
     nIter = atoi(argv[3]);
@@ -94,6 +88,7 @@ int main(int argc, char *argv[])
 
         // Mostramos el valor de PI aproximado, el error relativo y el tiempo de CPU en cada iteracion
         cout << fixed << left << "n=" << setw(8) << n_str.str()
-             << " PI (estimada)=" << setw(8) << pi_str.str() << " Error relativo(%)=" << setw(12) << error_rel_str.str() << " Tiempo CPU(s)=" << tiempo_cpu_str.str() << endl;
+             << " PI (estimada)=" << setw(8) << pi_str.str() << " Error relativo(%)=" << setw(12)
+             << error_rel_str.str() << " Tiempo CPU(s)=" << tiempo_cpu_str.str() << endl;
     }
 }

@@ -11,8 +11,7 @@
 
 using namespace std;
 
-// Pre: a <= b
-// Post: Muestra por pantalla una tabla de numeros aleatorios comprendidos entre dos numeros dados en argumentos
+// Muestra por pantalla una tabla de numeros aleatorios comprendidos entre dos numeros dados en argumentos
 int main(int argc, char *argv[])
 {
     // Declaracion de variables
@@ -20,13 +19,6 @@ int main(int argc, char *argv[])
     double b;
     unsigned num_nums;
     char caracter;
-
-    // Comprobacion de argumentos
-    if (argc != 5)
-    {
-        cout << "Error: Numero de argumentos incorrecto." << endl;
-        return 1;
-    }
 
     // Asignacion de variables
     caracter = argv[1][0];

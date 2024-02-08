@@ -10,10 +10,9 @@
 
 using namespace std;
 
-// Pre:  ---
-// Post: Muestra por pantalla el tiempo que tarda el usuario en pulsar la tecla enter desde
-//       que se muestra el mensaje "Pulse la tecla de fin de linea , por favor ... " las
-//       veces que se indique en el argumento del programa
+// Muestra por pantalla el tiempo que tarda el usuario en pulsar la tecla enter desde
+// que se muestra el mensaje "Pulse la tecla de fin de linea , por favor ... " las
+// veces que se indique en el argumento del programa
 int main(int argc, char *argv[])
 {
     // Declaracion de variables
@@ -21,11 +20,6 @@ int main(int argc, char *argv[])
     float tiempo = 0.0;
 
     // Comprobacion de argumentos
-    if (argc > 2)
-    {
-        cout << "Error: Numero de argumentos incorrecto." << endl;
-        return 1;
-    }
     if (argc == 1)
     {
         veces = 1;
@@ -33,12 +27,6 @@ int main(int argc, char *argv[])
     else
     {
         veces = atoi(argv[1]);
-    }
-
-    if (veces <= 0)
-    {
-        cout << "Error: El argumento debe ser un numero entero positivo." << endl;
-        return 1;
     }
 
     // Bucle de ejecucion
