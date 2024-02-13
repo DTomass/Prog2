@@ -14,15 +14,15 @@ RM = rm -f               # comando para borrar ficheros
 all: pruebasCal
 
 # Compilacion
-pruebasCal.o: pruebasCal.cpp
-	${CC} -c pruebasCal.cpp ${CPPFLAGS}
+pruebasCal.o: pruebasCalc.cpp
+	${CC} -c pruebasCalc.cpp ${CPPFLAGS}
 calculos.o: calculos.cpp calculos.hpp
 	${CC} -c calculos.cpp ${CPPFLAGS}
 
 # Linkado
-pruebasCal: pruebasCal.o calculos.o
-	${CC} pruebasCal.o calculos.o -o pruebasCal
+pruebasCal: pruebasCalc.o calculos.o
+	${CC} pruebasCalc.o calculos.o -o pruebasCalc
 
 # LIMPIEZA de todo lo generado. Ojo: se borrarán sin preguntar
 clean:
-	${RM} calculos.o pruebasCal.o pruebasCal
+	${RM} calculos.o pruebasCalc.o pruebasCalc
