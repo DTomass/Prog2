@@ -42,7 +42,7 @@ int cifraMayor(const int n, const int b)
     else
     {
         int cifra_mayor = cifraMayor(n / b, b);
-        int resto = n % 10;
+        int resto = n % b;
         if (cifra_mayor > resto)
         {
             return cifra_mayor;
@@ -79,6 +79,6 @@ int sumaCifras(const int n, const int b)
     }
     else
     {
-        return n % 10 + sumaCifras(n / b, b);
+        return n % b + sumaCifras(n / b, b);
     }
 }
