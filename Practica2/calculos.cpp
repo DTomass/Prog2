@@ -27,8 +27,14 @@ int numCifras(const int n, const int b)
 // Post: cifra(n,i,b) = (n / b^(i-1)) % b
 int cifra(const int n, const int i, const int b)
 {
-    int pos_cifra = pow(b, i - 1);
-    return (n / pos_cifra) % b;
+    if (i == 1)
+    {
+        return n % b;
+    }
+    else
+    {
+        return cifra(n / b, i - 1, b);
+    }
 }
 
 // Pre:  n >= 0 ∧ 2 <= b <= 10
